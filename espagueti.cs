@@ -13,6 +13,7 @@ namespace AppWebEspagueti
             var host = Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://0.0.0.0:5000"); // Escucha en todas las interfaces
                     webBuilder.Configure(app =>
                     {
                         app.Run(async context =>
@@ -42,3 +43,4 @@ namespace AppWebEspagueti
         }
     }
 }
+
