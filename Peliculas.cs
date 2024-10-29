@@ -119,3 +119,31 @@ public class RentalManager
         returnCommand.Execute();
     }
 }
+
+// Método Main para ejecutar el programa
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        var rentalManager = new RentalManager();
+
+        // Ejemplo de uso
+        Console.WriteLine("Procesando alquiler:");
+        rentalManager.ProcessRental("NewRelease", "cliente1");
+
+        Console.WriteLine("\nProcesando devolución:");
+        rentalManager.ProcessReturn("NewRelease", "cliente1");
+
+        Console.WriteLine("\nProcesando alquiler de película regular:");
+        rentalManager.ProcessRental("Regular", "cliente2");
+
+        Console.WriteLine("\nProcesando devolución de película regular:");
+        rentalManager.ProcessReturn("Regular", "cliente2");
+
+        Console.WriteLine("\nProcesando alquiler de película clásica:");
+        rentalManager.ProcessRental("OldClassic", "cliente3");
+
+        Console.WriteLine("\nProcesando devolución de película clásica:");
+        rentalManager.ProcessReturn("OldClassic", "cliente3");
+    }
+}
